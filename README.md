@@ -14,11 +14,22 @@ Celine Robinson is a 4th year Ph.D candidate in Civil and Environmental Engineer
 
 Our researcher Celine has provided us with several datasets including the infousa census dataset, the AST (above ground storage tank) data, and several natural hazard datasets. 
 
-First, the infousa data covers household demographic data, containing variables on household age, location, children, housing type, income, and more. The infousa data we were provided  contained around 38,248 files; each file includes data for one zip code in the US. In looking at the specific variables we used, we focused on the longitude and latitude coordinates of each household, age code, and children variables because Celine’s research focuses on how petrochemical tank spillage will affect neighboring houses with children and elderly in particular. 
+**Infousa Data**
+The infousa data covers household demographic data, containing variables on household age, location, children, housing type, income, and more. The infousa data we were provided  contained around 38,248 files; each file includes data for one zip code in the US. In looking at the specific variables we used, we focused on the longitude and latitude coordinates of each household, age code, and children variables because Celine’s research focuses on how petrochemical tank spillage will affect neighboring houses with children and elderly in particular. 
 
+**AST Data**
 The AST data was collected by Celine and her team; this data set provides information on all of the above ground storage tanks in the United States, totalling to around 98,000 tanks. This information includes tank type, diameter, longitude and latitude coordinates of the tanks. In our visualizations, we focused primarily on the longitude and latitude coordinates, which allowed us to precisely plot each tank and analyze tank distance to risks and households.
 
-Additionally, we also used the NRI natural hazard risk index data. This includes risk indexes for hurricanes, earthquakes, tornados, strong wind, coastal flooding, and riverine flooding across the US. We used these risk indexes to make visualizations displaying households and tanks within certain proximities with higher or lower risk indexes. 
+**National Risk Index Data, available at https://hazards.fema.gov/nri/data-resources**
+This dataset was made publicly available by the Federal Emergency Management Agency (FEMA), and contains extensive information on natural hazards risks for each county across the country. The columns we were specifically interested in were the ones with Risk Index Score values for each county. The Risk Index Score is on a scale from 0 to 100, and was calculated by FEMA and indicates the relative risk of that county for a specific natural hazard. The natural hazards deemed relevant to our project by our researcher were tornadoes, hurricanes, strong winds, coastal floods, riverine floods, and earthquakes.
+
+[INSERT SCREENSHOT OF DATA]
+
+**Floodplain Data, available at https://www.fema.gov/flood-maps/national-flood-hazard-layer**
+This dataset was made publicly available by FEMA, and contains information, including geometries, of over one million floodplains across the US. We specifically used the geometries provided to identify which tanks were on floodplains.
+
+[INSERT SCREENSHOT OF DATA]
+
 
 ## Our Tools
 Data manipulation and processing: Pandas, GeoPandas, and NumPy
@@ -68,7 +79,8 @@ In this file processing, we wanted to classify the households in terms of the co
 We also wanted to include natural hazard risk in our visualization of tank proximity and households. Earlier, we talked about classifying tanks by county so that we can merge the tank data with the NRI hazard data. In this output dataframe, we have now merged that dataframe with the household longitude and latitude coordinates so that we can plot tanks and households in the same dashboard. We have included the transformed (3857) and untransformed (4326) coordinates as well as the 6 different risk indexes (hurricanes, earthquakes, tornados, strong wind, coastal flooding, and riverine flooding). Moreover, since we wanted to plot each of the risks separately, we then made separate dataframes with the household and tank coordinates along with one of each of the risk columns; then, we exported these dataframes as individual parquet files. Therefore, when we want to make a visualization with only hurricane risk, we can just read in the respective parquet file and plot based on those points. 
 
 ## Visualizations
-###Stacked Bar Graph of Tank Types per State
+
+### Stacked Bar Graph of Tank Types per State
 This visualization cleanly displays the distribution of the different types of tanks for every state through a stacked bar chart. For each state, there is a color coded breakdown of tank type. There is also a key at the top right corner indicating which color correlates to which tank type.
 This visualization is helpful if you want to look at the different tank types that are popular or unpopular within a state. 
 To make this visualization, we use the tank ast data and calculate the number of tanks in each state by the tank type. Afterwards, we converted the dataframe to a pivot table which contains the number of each type of tank in each state. Then, we used matplotlib to create a stacked bar plot out of that pivot table.
@@ -107,7 +119,7 @@ Create a JupyterLab Singularity instance in an OnDemand session with or without 
 ### Step 2: Clone Gitlab repository
 Copy the following command into your terminal once you are inside the directory you want this project folder to be in:
 
-git clone git@gitlab.oit.duke.edu:ayw14/code-plus-team-will-shared.git
+```git clone git@gitlab.oit.duke.edu:sf282/code-plus-celine.git```
 
 ### Step 3: Open JupyterLab Notebooks + Run Code
 Once the repository has been cloned, you can open the JupyterLab notebooks and begin running the code. For any visualizations that need GPUs to run, make sure under the Kernel tab that the rapids kernel is selected (should be selected by , otherwise, select the Python 3 kernel. 
