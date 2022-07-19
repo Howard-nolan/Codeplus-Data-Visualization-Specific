@@ -14,38 +14,42 @@ Celine Robinson is a 4th year Ph.D candidate in Civil and Environmental Engineer
 
 Our researcher Celine has provided us with several datasets including the infousa census dataset, the AST (above ground storage tank) data, and several natural hazard datasets. 
 
-**Infousa Data**
+### Infousa Data
+
 The infousa data covers household demographic data, containing variables on household age, location, children, housing type, income, and more. The infousa data we were provided  contained around 38,248 files; each file includes data for one zip code in the US. In looking at the specific variables we used, we focused on the longitude and latitude coordinates of each household, age code, and children variables because Celine’s research focuses on how petrochemical tank spillage will affect neighboring houses with children and elderly in particular. 
 
-**AST Data**
+### AST Data
+
 The AST data was collected by Celine and her team; this data set provides information on all of the above ground storage tanks in the United States, totalling to around 98,000 tanks. This information includes tank type, diameter, longitude and latitude coordinates of the tanks. In our visualizations, we focused primarily on the longitude and latitude coordinates, which allowed us to precisely plot each tank and analyze tank distance to risks and households.
 
-**National Risk Index Data, available at https://hazards.fema.gov/nri/data-resources**
+### National Risk Index Data, available at https://hazards.fema.gov/nri/data-resources
+
 This dataset was made publicly available by the Federal Emergency Management Agency (FEMA), and contains extensive information on natural hazards risks for each county across the country. The columns we were specifically interested in were the ones with Risk Index Score values for each county. The Risk Index Score is on a scale from 0 to 100, and was calculated by FEMA and indicates the relative risk of that county for a specific natural hazard. The natural hazards deemed relevant to our project by our researcher were tornadoes, hurricanes, strong winds, coastal floods, riverine floods, and earthquakes.
 
 [INSERT SCREENSHOT OF DATA]
 
-**Floodplain Data, available at https://www.fema.gov/flood-maps/national-flood-hazard-layer**
+### Floodplain Data, available at https://www.fema.gov/flood-maps/national-flood-hazard-layer
+
 This dataset was made publicly available by FEMA, and contains information, including geometries, of over one million floodplains across the US. We specifically used the geometries provided to identify which tanks were on floodplains.
 
 [INSERT SCREENSHOT OF DATA]
 
 
 ## Our Tools
-Data manipulation and processing: Pandas, GeoPandas, and NumPy
-Pandas: an open-source Python library that provides an easy and intuitive way to read, process, and write data. We use Pandas to read in our data from .csv, .txt or .parquet files as a dataframe, then manipulate this dataframe through a variety of easy-to-use tools provided by the library. 
+### Data manipulation and processing: Pandas, GeoPandas, and NumPy
+**Pandas:** an open-source Python library that provides an easy and intuitive way to read, process, and write data. We use Pandas to read in our data from .csv, .txt or .parquet files as a dataframe, then manipulate this dataframe through a variety of easy-to-use tools provided by the library. 
 
-GeoPandas: an open-source Python library specifically focused on working with geospatial data. It provides much of the same functionality for manipulating and processing data as the Pandas libraries, but allows users to work with geospatial data (like points and geometries). We use GeoPandas to manipulate our spatial data in order to create visualizations.
+**GeoPandas:** an open-source Python library specifically focused on working with geospatial data. It provides much of the same functionality for manipulating and processing data as the Pandas libraries, but allows users to work with geospatial data (like points and geometries). We use GeoPandas to manipulate our spatial data in order to create visualizations.
 
-NumPy: an open-source Python library used for scientific computing. It allows for fast and easy manipulation of data through the use of arrays. We use NumPy to process and manipulate a lot of our data before we visualize it through GeoPandas or the Cuxfilter libraries.
+**NumPy:** an open-source Python library used for scientific computing. It allows for fast and easy manipulation of data through the use of arrays. We use NumPy to process and manipulate a lot of our data before we visualize it through GeoPandas or the Cuxfilter libraries.
 
-Visualizations: HoloViews and GeoViews
-HoloViews: an open-source Python library specializing in data analysis and visualization. It incorporates visualization tools like bokeh and matplotlib to allow users to work seamlessly with the data and its visualization. We use it in order to process and visualize our large amounts of data, as it provides an immediate, automatic visualization rendered by a variety of supported plotting libraries, including Bokeh or Matplotlib.
+### Visualizations: HoloViews and GeoViews
+**HoloViews:** an open-source Python library specializing in data analysis and visualization. It incorporates visualization tools like bokeh and matplotlib to allow users to work seamlessly with the data and its visualization. We use it in order to process and visualize our large amounts of data, as it provides an immediate, automatic visualization rendered by a variety of supported plotting libraries, including Bokeh or Matplotlib.
 
-GeoViews: an open-source Python library built on the HoloViews library allowing users to easily visualize multidimensional and geographical data. We use it to plot and visualize geographical data, such as to map tanks and households across the US.
+**GeoViews:** an open-source Python library built on the HoloViews library allowing users to easily visualize multidimensional and geographical data. We use it to plot and visualize geographical data, such as to map tanks and households across the US.
 
-Visualizations using Graphical-Processing Units (GPUs): Cuxfilter
-Cuxfilter: an open-source Python library, part of the RAPIDS suite of open-source software libraries built to work with data science on GPUs. This specific library seamlessly connects different visualization libraries such as bokeh and datashader and a GPU dataframe. We use this library to plot amounts of data orders of magnitudes larger than that we plot on HoloViews and GeoViews, all within seconds.
+### Visualizations using Graphical-Processing Units (GPUs): Cuxfilter
+**Cuxfilter:** an open-source Python library, part of the RAPIDS suite of open-source software libraries built to work with data science on GPUs. This specific library seamlessly connects different visualization libraries such as bokeh and datashader and a GPU dataframe. We use this library to plot amounts of data orders of magnitudes larger than that we plot on HoloViews and GeoViews, all within seconds.
 
 
 
@@ -86,11 +90,11 @@ This visualization is helpful if you want to look at the different tank types th
 To make this visualization, we use the tank ast data and calculate the number of tanks in each state by the tank type. Afterwards, we converted the dataframe to a pivot table which contains the number of each type of tank in each state. Then, we used matplotlib to create a stacked bar plot out of that pivot table.
 
 ### Number of Children Per County
-This map is a non-gpu visualization that shows a breakdown of the US by county, with each county being shaded differently based on the number of total children within that county. To make this visualization, we read in the preprocessed data frame that includes the calculated number of children per county and also geometries of each county in the US. In this visualization, we also plotted the tanks over the county breakdowns. To do so, we separately plot the tanks, before overlaying the tanks on top of the map with the county breakdowns. You can do this using the * operator, which in essence overlays one geoviews map on top of another.
+This map is a non-gpu visualization that shows a breakdown of the US by county, with each county being shaded differently based on the number of total children within that county. To make this visualization, we read in the preprocessed data frame that includes the calculated number of children per county and also geometries of each county in the US. In this visualization, we also plotted the tanks over the county breakdowns. To do so, we separately plot the tanks, before overlaying the tanks on top of the map with the county breakdowns. You can do this using the ```*``` operator, which in essence overlays one geoviews map on top of another.
 
 ### Map Colored by Number of Households Within 5mi of a Tank
 This map is a non-gpu map that is shaded by the number of households within 5mi of a tank. This is helpful because the user can look at which counties have more households closer to tanks, which is important in identifying which areas are in potential risk zones if a petrochemical tank does spill. 
-We made this visualization using the geoviews library by plotting the geometries of the counties in the US shaded by the number of households within 5mi of a tank. We also plotted the tanks and then overlaid the tanks map on top of the map with the US counties using the * operator.
+We made this visualization using the geoviews library by plotting the geometries of the counties in the US shaded by the number of households within 5mi of a tank. We also plotted the tanks and then overlaid the tanks map on top of the map with the US counties using the ```*``` operator.
 
 ### Charleston County Case Study
 This Charleston County visualization is a gpu cuxfilter dashboard with a zoom in of all of the households and tanks in Charleston County plotted on a map. On the sides of the dashboard, there are multi select features to display whether or not a household contains elderly people and whether or not households are within a certain distance range of a tank. We also included a distance range slider so that users can look at households a specific distance range away from a tank.
