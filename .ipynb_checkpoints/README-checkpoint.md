@@ -55,7 +55,7 @@ This dataset was made publicly available by FEMA, and contains information, incl
 
 ## Data Merging and Wrangling Workflow Overview
 
-If you would like a more detailed overview, please look at the more in-depth README [here](https://gitlab.oit.duke.edu/at341/codeplus-celine-dcc-package/-/tree/master/processing/README.md)
+If you would like a more detailed overview, please look at the more in-depth README [here](https://gitlab.oit.duke.edu/sf282/code-plus-celine/-/blob/master/demos/README.md)
 
 ### Merging InfoUSA Data
 In the infousa dataset, we are provided around 38,000 zip code files for the year 2020. Each file includes demographic data for a specific zip code in the US. Therefore, in order for us to plot visualizations for Celine’s counties of interest, Charleston and Houston County, or visualizations of the entire United States, we had to merge these zip code files together. 
