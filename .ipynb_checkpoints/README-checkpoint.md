@@ -4,7 +4,6 @@
 
 
 ![Gif](demos/gif_vid_AdobeExpress.gif)
-
 ![Gif](demos/All_US_Gif_Vid_AdobeExpress.gif)
 
 ## Project Introduction 
