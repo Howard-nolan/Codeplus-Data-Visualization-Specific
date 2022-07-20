@@ -2,6 +2,9 @@
 
 # Authors: Alyssa Ting, Susan Feng, Joey Nolan
 
+
+![Gif](gif_vid_AdobeExpress.gif)
+
 ## Project Introduction 
 
 This project was part of the 2022 Duke University Code+ Program. The primary goal of this project was to develop interactive visualization tools and workflows to help Duke researchers analyze and visualize their large datasets. The visualizations developed and documented for this project were created using Holoviews, Datashader, and Dask in JupyterLab notebooks that were hosted in OnDemand sessions on the Duke Compute Cluster.  
