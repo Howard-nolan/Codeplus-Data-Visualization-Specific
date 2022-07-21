@@ -108,11 +108,13 @@ This map is a non-gpu visualization that shows a breakdown of the US by county, 
 ### Map Colored by Number of Households Within 5mi of a Tank
 This map is a non-gpu map that is shaded by the number of households within 5mi of a tank. This is helpful because the user can look at which counties have more households closer to tanks, which is important in identifying which areas are in potential risk zones if a petrochemical tank does spill. 
 
+![Gif](images/HH_County_by_County_Gif_Vid_AdobeExpress.gif)
+
 
 ### Charleston County Case Study
 This Charleston County visualization is a gpu cuxfilter dashboard with a zoom in of all of the households and tanks in Charleston County plotted on a map. On the sides of the dashboard, there are multi select features to display whether or not a household contains elderly people and whether or not households are within a certain distance range of a tank. We also included a distance range slider so that users can look at households a specific distance range away from a tank.
 
-![Gif](images/Charleston_Case_Study_Gif_Vid_AdobeExpress.PNG)
+![Gif](images/Charleston_Case_Study.gif)
 
 ### Harris County Case Study
 For this visualization, we took the same steps as the ones described above, the exception being that we used a different pre-processed file with households in Harris County. Our output visualization also contains the same multiselect and sliding features as the Charleston County case study map.
