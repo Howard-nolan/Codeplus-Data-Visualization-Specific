@@ -53,6 +53,8 @@ This dataset was made publicly available by FEMA, and contains information, incl
 ### Visualizations: HoloViews and GeoViews
 **HoloViews:** an open-source Python library specializing in data analysis and visualization. It incorporates visualization tools like bokeh and matplotlib to allow users to work seamlessly with the data and its visualization. We use it in order to process and visualize our large amounts of data, as it provides an immediate, automatic visualization rendered by a variety of supported plotting libraries, including Bokeh or Matplotlib.
 
+https://holoviews.org/getting_started/Introduction.html
+
 **GeoViews:** an open-source Python library built on the HoloViews library allowing users to easily visualize multidimensional and geographical data. We use it to plot and visualize geographical data, such as to map tanks and households across the US.
 
 ### Visualizations using Graphical-Processing Units (GPUs): Cuxfilter
