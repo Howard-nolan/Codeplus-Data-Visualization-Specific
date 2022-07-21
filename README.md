@@ -22,21 +22,24 @@ Our researcher Celine has provided us with several datasets including the infous
 
 The infousa data covers household demographic data, containing variables on household age, location, children, housing type, income, and more. The infousa data we were provided  contained around 38,248 files; each file includes data for one zip code in the US. In looking at the specific variables we used, we focused on the longitude and latitude coordinates of each household, age code, and children variables because Celine’s research focuses on how petrochemical tank spillage will affect neighboring houses with children and elderly in particular. 
 
+
 ### AST Data
 
 The AST data was collected by Celine and her team; this data set provides information on all of the above ground storage tanks in the United States, totalling to around 98,000 tanks. This information includes tank type, diameter, longitude and latitude coordinates of the tanks. In our visualizations, we focused primarily on the longitude and latitude coordinates, which allowed us to precisely plot each tank and analyze tank distance to risks and households.
+
+![Gif](images/synthetic_ast.PNG)
 
 ### National Risk Index Data, available at https://hazards.fema.gov/nri/data-resources
 
 This dataset was made publicly available by the Federal Emergency Management Agency (FEMA), and contains extensive information on natural hazards risks for each county across the country. The columns we were specifically interested in were the ones with Risk Index Score values for each county. The Risk Index Score is on a scale from 0 to 100, and was calculated by FEMA and indicates the relative risk of that county for a specific natural hazard. The natural hazards deemed relevant to our project by our researcher were tornadoes, hurricanes, strong winds, coastal floods, riverine floods, and earthquakes.
 
-[INSERT SCREENSHOT OF DATA]
+![Gif](images/nri_data.PNG)
 
 ### Floodplain Data, available at https://www.fema.gov/flood-maps/national-flood-hazard-layer
 
 This dataset was made publicly available by FEMA, and contains information, including geometries, of over one million floodplains across the US. We specifically used the geometries provided to identify which tanks were on floodplains.
 
-[INSERT SCREENSHOT OF DATA]
+![Gif](images/floodplain_data.PNG)
 
 
 ## Our Tools
@@ -95,9 +98,12 @@ We also wanted to include natural hazard risk in our visualization of tank proxi
 ### Stacked Bar Graph of Tank Types per State
 This visualization displays the distribution of the different types of tanks for every state through a stacked bar chart. For each state, there is a color coded breakdown of tank type with a key at the top right corner indicating which color correlates to which tank type. This visualization is helpful if you want to look at the different tank types that are popular or unpopular within a state. 
 
+![Gif](images/Stacked Bar Graph.PNG)
 
 ### Number of Children Per County
 This map is a non-gpu visualization that shows a breakdown of the US by county, with each county being shaded differently based on the number of total children within that county. In this visualization, we also plotted the tanks over the county breakdowns. 
+
+![Gif](images/Number_Children_per_County_Gif_Wid_AdobeExpress.gif)
 
 ### Map Colored by Number of Households Within 5mi of a Tank
 This map is a non-gpu map that is shaded by the number of households within 5mi of a tank. This is helpful because the user can look at which counties have more households closer to tanks, which is important in identifying which areas are in potential risk zones if a petrochemical tank does spill. 
@@ -106,18 +112,27 @@ This map is a non-gpu map that is shaded by the number of households within 5mi 
 ### Charleston County Case Study
 This Charleston County visualization is a gpu cuxfilter dashboard with a zoom in of all of the households and tanks in Charleston County plotted on a map. On the sides of the dashboard, there are multi select features to display whether or not a household contains elderly people and whether or not households are within a certain distance range of a tank. We also included a distance range slider so that users can look at households a specific distance range away from a tank.
 
+![Gif](images/Charleston_Case_Study_Gif_Vid_AdobeExpress.PNG)
+
 ### Harris County Case Study
 For this visualization, we took the same steps as the ones described above, the exception being that we used a different pre-processed file with households in Harris County. Our output visualization also contains the same multiselect and sliding features as the Charleston County case study map.
+
+![Gif](images/Harris_Case_Study_Gif_Vid_AdobeExpress.gif)
 
 ### Map of All US Households Plotted and Colored by Distance to Nearest Tank
 This visualization is also similar to the ones mentioned above. Here, we have a map of the United States with all of the households that have elderly and children plotted. We also have all the tanks plotted in a different color as well. On the side, we have the elderly age category multiselect and the distance to tanks range slider.
 
+![Gif](images/All_US_Gif_Vid_AdobeExpress.gif)
+
 ### Maps of All US Households Colored by Distance to Nearest Tank with Natural Hazard Sliders
 These visualizations display a map of the US with all households containing elderly and children as well as all of the tanks in the US. On the side, there is a natural hazard risk range slider for a specific risk. We thus have made these visualizations for each of the 6 natural hazard risks: hurricanes, earthquakes, tornados, strong wind, coastal flooding, and riverine flooding. These range sliders allow users to look at households with a specific risk index to a certain natural hazard. We also have included the distance range slider so that users can also look at households a specific distance range away from a tank. This is helpful because tanks and households close to each other will oftentimes be associated with the same risk index. 
 
+![Gif](images/Coastal_Flooding_Gif_Vid_AdobeExpress.gif)
 
 ### Address Lookup Web App
 This is a web app that allows users to type in an address anywhere in the US, and the web app will output how far away (in miles) the nearest petrochemical tank is from the input location. The natural disaster risk index of the nearest location will also be displayed on the screen along with a detailed zoomed in map of the input location and the ten closest tanks. 
+
+![Gif](images/WebApp_Gif_Vid_AdobeExpress.gif)
 
 
 ## User Instructions
