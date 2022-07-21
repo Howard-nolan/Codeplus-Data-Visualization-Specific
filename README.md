@@ -98,12 +98,12 @@ We also wanted to include natural hazard risk in our visualization of tank proxi
 ### Stacked Bar Graph of Tank Types per State
 This visualization displays the distribution of the different types of tanks for every state through a stacked bar chart. For each state, there is a color coded breakdown of tank type with a key at the top right corner indicating which color correlates to which tank type. This visualization is helpful if you want to look at the different tank types that are popular or unpopular within a state. 
 
-![Gif](images/Stacked Bar Graph.PNG)
+![Gif](images/Stacked_Bar_Graph.PNG)
 
 ### Number of Children Per County
 This map is a non-gpu visualization that shows a breakdown of the US by county, with each county being shaded differently based on the number of total children within that county. In this visualization, we also plotted the tanks over the county breakdowns. 
 
-![Gif](images/Number_Children_per_County_Gif_Wid_AdobeExpress.gif)
+![Gif](images/Number_Children_per_County_Gif_Vid_AdobeExpress.gif)
 
 ### Map Colored by Number of Households Within 5mi of a Tank
 This map is a non-gpu map that is shaded by the number of households within 5mi of a tank. This is helpful because the user can look at which counties have more households closer to tanks, which is important in identifying which areas are in potential risk zones if a petrochemical tank does spill. 
