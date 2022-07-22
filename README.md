@@ -30,13 +30,13 @@ The AST data was collected by Celine and her team; this data set provides inform
 
 ![Gif](images/synthetic_ast.PNG)
 
-### National Risk Index Data, available at https://hazards.fema.gov/nri/data-resources
+### National Risk Index Data, available [here](https://hazards.fema.gov/nri/data-resources)
 
 This dataset was made publicly available by the Federal Emergency Management Agency (FEMA), and contains extensive information on natural hazards risks for each county across the country. The columns we were specifically interested in were the ones with Risk Index Score values for each county. The Risk Index Score is on a scale from 0 to 100, and was calculated by FEMA and indicates the relative risk of that county for a specific natural hazard. The natural hazards deemed relevant to our project by our researcher were tornadoes, hurricanes, strong winds, coastal floods, riverine floods, and earthquakes.
 
 ![Gif](images/nri_data.PNG)
 
-### Floodplain Data, available at https://www.fema.gov/flood-maps/national-flood-hazard-layer
+### Floodplain Data, available [here](https://www.fema.gov/flood-maps/national-flood-hazard-layer) 
 
 This dataset was made publicly available by FEMA, and contains information, including geometries, of over one million floodplains across the US. We specifically used the geometries provided to identify which tanks were on floodplains.
 
