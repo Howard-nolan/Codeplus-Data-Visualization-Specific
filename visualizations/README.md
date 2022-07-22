@@ -50,4 +50,4 @@ To make these 6 separate visualizations, we first read in the pre-processed file
 This is a web app that allows users to type in an address anywhere in the US, and the web app will output how far away (in miles) the nearest petrochemical tank is from the input location. The natural disaster risk index of the nearest location will also be displayed on the screen along with a detailed zoomed in map of the input location and the ten closest tanks. 
 We are using the Folium library to visualize the zoomed in map, current location markers, and ten nearest tanks markers. Once the input address is inputted into the search bar, we are using the Open Map Street and Google Maps geocoding api to convert the address to latitude and longitude coordinates. This web app is hosted on a virtual machine run by Oracle.
 
-![Alt Text](imageFiles/Web_Demo.gif)
+![Alt Text](images/webapp1.gif)
