@@ -105,7 +105,7 @@ We also wanted to include natural hazard risk in our visualization of tank proxi
 ### Stacked Bar Graph of Tank Types per State
 This visualization displays the distribution of the different types of tanks for every state through a stacked bar chart. For each state, there is a color coded breakdown of tank type with a key at the top right corner indicating which color correlates to which tank type. This visualization is helpful if you want to look at the different tank types that are popular or unpopular within a state. 
 
-<img src="/images/Stacked_Bar_Graph.PNG" alt="flowchart" width="500"/>
+<img src="/images/Stacked_Bar_Graph.PNG" alt="flowchart" width="400"/>
 
 ### Number of Children Per County
 This map is a non-gpu visualization that shows a breakdown of the US by county, with each county being shaded differently based on the number of total children within that county. In this visualization, we also plotted the tanks over the county breakdowns. 
@@ -141,7 +141,7 @@ These visualizations display a map of the US with all households containing elde
 ### Address Lookup Web App
 This is a web app that allows users to type in an address anywhere in the US, and the web app will output how far away (in miles) the nearest petrochemical tank is from the input location. The natural disaster risk index of the nearest location will also be displayed on the screen along with a detailed zoomed in map of the input location and the ten closest tanks. 
 
-<img src="/images/webapp1.gif" alt="flowchart" width="500"/>
+<img src="/images/webapp1.gif" alt="flowchart" width="400"/>
 
 
 ## User Instructions
