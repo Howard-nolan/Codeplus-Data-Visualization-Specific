@@ -3,7 +3,7 @@
 # Authors: Alyssa Ting, Susan Feng, Joey Nolan
 
 ![Gif](images/All_US_Gif_Vid_AdobeExpress.gif)
-![Alt Text](imageFiles/Web_Demo.gif)
+![Alt Text](images/Web_Demo2.gif)
 
 
 
