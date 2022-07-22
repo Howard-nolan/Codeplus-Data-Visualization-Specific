@@ -1,5 +1,8 @@
 # Data Merging and Wrangling Workflow Overview
 
+
+<img src="/images/celine_flowchart.png" alt="flowchart" width="400"/>
+
 ### Merging InfoUSA Data
 In the infousa dataset, we are provided around 38,000 zip code files for the year 2020. Each file includes demographic data for a specific zip code in the US. Therefore, in order for us to plot visualizations for Celine’s counties of interest, Charleston and Houston County, or visualizations of the entire United States, we had to merge these zip code files together.
 

@@ -61,7 +61,7 @@ More information on HoloViews linked [here](https://holoviews.org/getting_starte
 ### Visualizations using Graphical-Processing Units (GPUs): Cuxfilter
 **Cuxfilter:** an open-source Python library, part of the RAPIDS suite of open-source software libraries built to work with data science on GPUs. This specific library seamlessly connects different visualization libraries such as bokeh and datashader and a GPU dataframe. We use this library to plot amounts of data orders of magnitudes larger than that we plot on HoloViews and GeoViews, all within seconds.
 
-More information on HoloViews linked [here](https://docs.rapids.ai/api/cuxfilter/stable/)
+More information on Cuxfilter linked [here](https://docs.rapids.ai/api/cuxfilter/stable/)
 
 
 ## Data Merging and Wrangling Workflow Overview
