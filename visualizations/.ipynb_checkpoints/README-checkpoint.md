@@ -5,7 +5,8 @@ This visualization cleanly displays the distribution of the different types of t
 This visualization is helpful if you want to look at the different tank types that are popular or unpopular within a state. 
 To make this visualization, we use the tank ast data and calculate the number of tanks in each state by the tank type. Afterwards, we converted the dataframe to a pivot table which contains the number of each type of tank in each state. Then, we used matplotlib to create a stacked bar plot out of that pivot table.
 
-![Gif](images/Stacked_Bar_Graph.PNG)
+<img src="/images/Stacked_Bar_Graph.PNG" alt="flowchart" width="500"/>
+
 
 ### Number of Children Per County
 This map is a non-gpu visualization that shows a breakdown of the US by county, with each county being shaded differently based on the number of total children within that county. To make this visualization, we read in the preprocessed data frame that includes the calculated number of children per county and also geometries of each county in the US. In this visualization, we also plotted the tanks over the county breakdowns. To do so, we separately plot the tanks, before overlaying the tanks on top of the map with the county breakdowns. You can do this using the ```*``` operator, which in essence overlays one geoviews map on top of another.

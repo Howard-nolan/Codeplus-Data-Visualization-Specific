@@ -4,8 +4,6 @@
 
 ![Gif](images/All_US_Gif_Vid_AdobeExpress.gif)
 ![Example](/images/webapp3.gif)
-<!-- ![Alt Text](images/WebApp_Gif_Vid_AdobeExpress.gif) -->
-
 
 
 
