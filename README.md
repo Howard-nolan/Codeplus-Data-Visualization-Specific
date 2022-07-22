@@ -64,6 +64,8 @@ https://holoviews.org/getting_started/Introduction.html
 
 ## Data Merging and Wrangling Workflow Overview
 
+<img src="/images/celine_flowchart.png" alt="flowchart" width="400"/>
+
 #### If you would like a more detailed overview of each demo, please look at the more in-depth [README](https://gitlab.oit.duke.edu/sf282/code-plus-celine/-/blob/master/file_processing/README.md)
 
 
