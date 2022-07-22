@@ -1,7 +1,4 @@
-# Demo ReadMe
-
-
-## Visualizations
+# Visualizations
 
 ### Stacked Bar Graph of Tank Types per State
 This visualization cleanly displays the distribution of the different types of tanks for every state through a stacked bar chart. For each state, there is a color coded breakdown of tank type. There is also a key at the top right corner indicating which color correlates to which tank type.
